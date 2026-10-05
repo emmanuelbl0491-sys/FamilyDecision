@@ -1,0 +1,16 @@
+# Zona ROJA y ÁMBAR: nunca se versionan ni se suben
+privado/*
+!privado/LEEME.md
+
+# Hojas de cálculo con datos reales (zona ÁMBAR)
+*.xlsx
+*.xls
+*.csv
+!datos/ejemplos/*.csv
+
+# Datos reales capturados (solo se versionan ejemplos y plantillas)
+datos/reales/
+
+# Sistema
+.DS_Store
+Thumbs.db
