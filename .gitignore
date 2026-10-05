@@ -6,10 +6,10 @@ privado/*
 *.xlsx
 *.xls
 *.csv
-!datos/ejemplos/*.csv
 
-# Datos reales capturados (solo se versionan ejemplos y plantillas)
-datos/reales/
+# Copias llenas por la familia (datos reales): nunca se suben
+mis-datos/*
+!mis-datos/LEEME.md
 
 # Sistema
 .DS_Store

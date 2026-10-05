@@ -1,30 +1,30 @@
-# privado/ — Zona ROJA y ÁMBAR (solo en tu computadora)
+# Carpeta privada
 
-Esta carpeta **nunca** se sube a Claude, a GitHub ni a ningún servicio en la nube. `.gitignore` la bloquea.
+## ¿Qué es esto?
+Aquí se guarda lo que **nunca** se le da a Claude ni se sube a internet. Esta carpeta se queda solo en tu computadora.
 
-## Qué va aquí
-| Archivo sugerido | Zona | Contenido |
-|---|---|---|
-| `clave-alias.md` | ROJA | Relación alias ↔ nombre real |
-| `datos-familia.xlsx` | ÁMBAR | Cifras exactas: ingresos, saldos, edades |
-| `documentos/` | ROJA | Identificaciones, pólizas, expedientes (mejor en un gestor de contraseñas cifrado) |
+## Qué guardar aquí
+- **Quién es quién:** Padre-A es…, Padre-B es…, Hijo-1 es…
+- **Cantidades exactas:** cuánto ganan, cuánto tienen ahorrado, cuánto deben.
+- **Documentos:** identificaciones, pólizas, estados de cuenta. Mejor todavía, en un gestor de contraseñas.
 
-## Plantilla: clave de alias
-```markdown
-| Alias   | Nombre real | Notas |
-|---------|-------------|-------|
-| Padre-A |             |       |
-| Padre-B |             |       |
-| Hijo-1  |             |       |
-```
+## La regla
+Algo sale de esta carpeta solo convertido en **alias** (Padre-A) o en **rango** (rango C).
+Ejemplo: "ganamos 74,300 al año" sale como "ganamos en el rango C".
 
-## Ejemplo (EJEMPLO FICTICIO)
-```markdown
-| Alias   | Nombre real | Notas            |
-|---------|-------------|------------------|
-| Padre-A | (nombre)    | Arquitecto IA    |
-| Hijo-1  | (nombre)    | Nacido en 2022   |
-```
+## Nunca le des a Claude
+- Nombres reales
+- CURP, RFC, NSS, pasaporte o cualquier identificación
+- Números de cuenta o de tarjeta
+- Direcciones, teléfonos o correos
+- Diagnósticos o expedientes médicos
 
-## Regla de salida
-Un dato sale de esta carpeta solo convertido en **banda o alias**. Ejemplo: "ingreso 74,300 USD/año" sale como "Banda C (60–80k USD/año)".
+Si lo pegas por error, Claude se detiene y te pide borrarlo.
+
+---
+
+## EJEMPLO FICTICIO
+Archivo `privado/quien-es-quien.md`:
+- Padre-A = (nombre real)
+- Padre-B = (nombre real)
+- Hijo-1 = (nombre real), nació en 2022

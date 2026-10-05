@@ -1,134 +1,111 @@
-# Empieza aquí — Paso a paso para los humanos
+# Empieza aquí
 
-> Para la Junta (Padre-A, Padre-B) y para el Vibe Coder. No necesitas saber programar.
-> Sigue los pasos en orden. Cada paso dice **qué archivo usar**, **dónde está su ejemplo** y **para qué sirve**.
+## ¿Qué es esto?
+Un sistema para que la familia tome decisiones importantes con calma y con orden, no con corazonadas.
+Ustedes escriben con palabras sencillas. Claude ordena, revisa y hace las cuentas. **Ustedes deciden.**
 
-## Reglas de oro (léelas una vez)
-- **Escribe en listas, no en tablas.** Una idea por línea, separada con ` · `.
-- **Notas del 1 al 10:** 1 = muy malo · 5 = regular, no alcanza · 6 = apenas aprobado · 10 = más que excelente.
-- **Pilares:** dinero · salud · familia · educación · seguridad.
-- **Sin pesos y sin JSON.** La IA hace las cuentas y, al final, genera el JSON.
-- **Solo alias y bandas.** Escribe "Padre-A" y "Banda C", nunca nombres reales ni cifras exactas.
-- **Si no sabes algo**, escribe `PENDIENTE: ¿…?`. No adivines.
-- **Cómo usar una plantilla:** cópiala a `datos/reales/` con un nombre claro (por ejemplo `decision-escuela-hijo1.md`), borra la sección "Ejemplo" de tu copia y llénala.
+## ¿Quién hace qué?
+- **Padre-A y Padre-B (la Junta):** llenan los archivos y toman todas las decisiones.
+- **El Vibe Coder:** ayuda a la familia a llenar los archivos y usa las frases listas con Claude.
+- **El Arquitecto:** es el puente con la parte técnica. Revisa que todo funcione y atiende las dudas técnicas.
+- **Claude:** pone números, ordena la redacción, revisa errores, hace las cuentas y recomienda. **Nunca decide.**
 
-Línea de ejemplo: `- Mudanza a ciudad natal · dinero · 10`
+## 4 reglas
+1. **Nada de nombres reales.** Escribe Padre-A, Padre-B, Hijo-1, Hijo-2.
+2. **Nada de cantidades exactas.** Usa los rangos de dinero (rango A, B, C…).
+3. **Califica del 1 al 10.** 1 = muy mal · 5 = regular, no alcanza · 6 = apenas bien · 10 = más que excelente.
+4. **Si no sabes algo, escribe "no sé".** No adivines.
 
----
+No te preocupes por escribir bonito. Claude pule la redacción antes de revisar nada.
 
-## Preparación (una sola vez)
-
-1.- **Configuración de Claude:** empieza aquí, antes de abrir cualquier archivo.
-- Qué hacer: en Claude, entra a Settings > Privacy y apaga "Help improve Claude".
-- Más información en `docs/02-privacidad-zonas.md`.
-- Úsalo para: que lo que escribas sobre tu familia no se use para entrenar modelos.
-
-2.- **`privado/LEEME.md`:** sigue con este archivo.
-- Qué hacer: en tu computadora, crea `privado/clave-alias.md` (quién es Padre-A, Padre-B, Hijo-1…) y `privado/datos-familia.xlsx` con las cifras exactas.
-- El ejemplo está en `privado/LEEME.md` (sección "Ejemplo").
-- Úsalo para: guardar lo que **nunca** se le da a Claude (nombres reales, identificaciones, cuentas, cifras exactas). Esta carpeta no se sube a ningún lado.
+## Dónde guardar lo que llenas
+Nunca escribas sobre los archivos originales: son el formato en blanco. Haz una copia en la carpeta `mis-datos/` y llena la copia. Esa carpeta nunca se sube a internet. También puedes pedirle a Claude: *"Ayúdame a llenar [archivo]. Hazme las preguntas una por una."*
 
 ---
 
-## Datos de la familia (la primera vez; después solo se actualizan)
+## Paso a paso
 
-3.- **`datos/plantillas/bandas.plantilla.md`**
-- Qué hacer: define rangos de dinero (Banda A, B, C… para el ingreso y G1, G2… para el gasto).
-- El ejemplo está al final del mismo archivo.
-- Úsalo para: hablar de dinero sin cifras exactas, por ejemplo "la escuela nueva cuesta una banda más".
+### Preparación (una sola vez)
 
-4.- **`datos/plantillas/limites-duros.plantilla.md`**
-- Qué hacer: escribe lo que la familia **nunca** aceptaría, por ejemplo "colchón de emergencia menor a 3 meses".
-- El ejemplo está al final del mismo archivo.
-- Úsalo para: que la IA descarte automáticamente una rama que ponga en riesgo algo innegociable.
+1.- **Configuración de Claude:** empieza aquí.
+- En Claude, entra a Settings > Privacy y apaga "Help improve Claude".
+- Sirve para que lo que escribas de tu familia no se use para entrenar a la IA.
 
-5.- **`datos/plantillas/perfil-familia.plantilla.md`**
-- Qué hacer: anota quiénes son, quién viene en camino y los datos por tema (ingresos, seguro, escuela, auto…). Cada dato lleva bajo / probable / alto y una confianza baja, media o alta.
-- El ejemplo está al final del mismo archivo.
-- Úsalo para: que la IA conozca la situación de la familia sin datos privados.
+2.- **`privado/LEEME.md`**
+- Anota en tu computadora quién es quién (Padre-A = …) y las cantidades exactas de dinero.
+- El ejemplo está en el mismo archivo.
+- Sirve para guardar lo que **nunca** se le da a Claude.
 
-6.- **`datos/plantillas/pros-contras-vida-actual.plantilla.md`**
-- Qué hacer: haz una lista de lo bueno y lo malo de la vida de hoy, con pilar y nota.
-- El ejemplo está al final del mismo archivo.
-- Úsalo para: descubrir **qué decisión conviene abrir primero**. El pilar con la nota más baja suele señalarla.
+### Conocer a la familia (la primera vez; después solo se actualiza)
 
-7.- **`datos/plantillas/fechas-limite.plantilla.md`**
-- Qué hacer: lista todo lo que vence (admisiones, pólizas, trámites), de lo más próximo a lo más lejano.
+3.- **`familia/1-lo-que-nunca-aceptamos.md`**
+- Escribe frases que empiecen con "Nunca vamos a…".
 - El ejemplo está al final del mismo archivo.
-- Úsalo para: no perder una fecha que cierra una opción (por ejemplo, la admisión escolar).
+- Sirve para que Claude descarte los caminos peligrosos.
+
+4.- **`familia/2-dinero-en-rangos.md`**
+- Pon el dinero en rangos con letra.
+- El ejemplo está al final del mismo archivo.
+- Sirve para hablar de dinero sin cifras exactas.
+
+5.- **`familia/3-quienes-somos.md`**
+- Contesta preguntas sencillas sobre la familia.
+- El ejemplo está al final del mismo archivo.
+- Sirve para que Claude entienda su situación.
+
+6.- **`familia/4-como-estamos-hoy.md`**
+- Haz una lista de lo bueno y lo malo de su vida hoy, con calificación.
+- El ejemplo está al final del mismo archivo.
+- Sirve para descubrir qué decisión conviene tomar primero.
+
+7.- **`familia/5-fechas-importantes.md`**
+- Escribe cada fecha y qué vence ese día.
+- El ejemplo está al final del mismo archivo.
+- Sirve para que no se les pase una inscripción o un trámite.
+
+### Cada vez que haya una decisión
+
+8.- **`decisiones/nueva-decision.md`**
+- Escribe la pregunta, los caminos, qué podría pasar y lo bueno y lo malo de cada camino.
+- Hay dos ejemplos: `decisiones/ejemplos/escuela.md` y `decisiones/ejemplos/seguro-medico.md`.
+- Sirve para cualquier decisión grande: escuela, seguro, mudanza, auto, otro hijo.
+
+9.- **`decisiones/mi-opinion-a-solas.md`**
+- Cada padre llena su copia **sin ver la del otro**.
+- El ejemplo está al final del mismo archivo.
+- Sirve para descubrir en qué no están de acuerdo.
+
+10.- **Pedir la revisión:** usa `frases-para-claude.md`.
+- Pega en Claude: *"Revisa mi decisión [nombre del archivo]."*
+- Lo que contesta Claude se ve como `decisiones/ejemplos/escuela-resultado.md`.
+- Claude te dice qué arreglar y cómo sale cada camino.
+
+11.- **Arreglar:** corrige tu copia con lo que te dijo Claude y pide la revisión otra vez. Corriges tú; Claude no cambia tus respuestas.
+
+### La junta (domingo, 30 minutos)
+
+12.- **`juntas/notas-de-la-junta.md`**
+- Contesta 5 preguntas: qué es urgente, cómo va el dinero, qué decidieron, qué hay que hacer y cuándo es la próxima junta.
+- El ejemplo está al final del mismo archivo.
+
+13.- **`juntas/lo-que-decidimos.md`**
+- Agrega una línea por cada decisión. Nunca borres líneas.
+- El ejemplo está al final del mismo archivo.
+
+### Cada mes
+
+14.- **`juntas/como-nos-sentimos.md`**
+- Cada integrante califica del 1 al 10 cómo se siente en 5 temas.
+- El ejemplo está al final del mismo archivo.
 
 ---
 
-## Cada vez que haya una decisión
-
-8.- **`datos/plantillas/decision.plantilla.md`**
-- Qué hacer: escribe la pregunta, la fecha límite, las ramas (la primera siempre es "Quedarnos como estamos"), qué puede pasar en cada rama con su porcentaje (deben sumar 100%) y los pros y contras con nota.
-- Hay dos ejemplos completos:
-  - `datos/ejemplos/decision-ejemplo.md`: decisión sencilla (escuela bilingüe).
-  - `datos/ejemplos/decision-ejemplo-poliza.md`: decisión con un límite duro.
-- Úsalo para: cualquier decisión importante, como cambiar de escuela, de póliza, de ciudad, de auto o tener otro hijo.
-
-9.- **`datos/plantillas/estimacion-individual.plantilla.md`**
-- Qué hacer: cada padre llena **su propia copia, a solas**, con sus porcentajes y, si quiere, sus notas.
-- El ejemplo está al final del mismo archivo.
-- Úsalo para: ver dónde no están de acuerdo. La IA marca las diferencias mayores a 20 puntos en un porcentaje o a 3 en una nota.
-
-10.- **Revisión con IA:** ve a `subagentes/LEEME.md`.
-- Qué hacer: pídele a Claude: *"Revisa `datos/reales/decision-escuela-hijo1.md` con auditor-privacidad, después con revisor-decisiones y al final con revisor-gramatical."*
-- El ejemplo de informe está en `subagentes/revisor-decisiones.md` (sección "Ejemplo").
-- Úsalo para: encontrar errores antes de la junta, como porcentajes que no suman 100%, un pro con nota baja o un dato privado.
-
-11.- **Corrige y anota:** usa `flujo-trabajo/bitacora-revisiones.plantilla.md`.
-- Qué hacer: corrige tu Markdown según el informe y anota la revisión. Corriges tú; la IA no corrige por ti.
-- El ejemplo está al final del mismo archivo.
-- Úsalo para: dejar rastro de qué se revisó y qué se corrigió.
-
-12.- **Aprobación del Arquitecto:** ve a `flujo-trabajo/checklist-arquitecto.md`.
-- Qué hacer: el Arquitecto revisa la lista y cambia el estado de la decisión a `aprobada`.
-- El ejemplo está al final del mismo archivo.
-- Úsalo para: que solo lleguen a la junta decisiones limpias.
-
-13.- **Puntuar:** usa la skill `skills/puntuar-decision/SKILL.md`.
-- Qué hacer: pídele a Claude: *"Usa la skill puntuar-decision con esta decisión."*
-- El ejemplo de resultado está en `datos/ejemplos/decision-ejemplo-puntuada.md`.
-- Úsalo para: ver la nota de cada rama, su punto más débil, el riesgo de límite duro y si hay empate técnico.
-
----
-
-## La junta (domingo, 30 minutos)
-
-14.- **`flujo-trabajo/acta-junta.plantilla.md`**
-- Qué hacer: el COO humano anota los temas urgentes, la decisión votada, el criterio de salida y las acciones con dueño y fecha.
-- El ejemplo está al final del mismo archivo.
-- Úsalo para: cerrar cada junta con algo concreto y fechado.
-
-15.- **`flujo-trabajo/bitacora-decisiones.plantilla.md`**
-- Qué hacer: agrega una línea por cada decisión votada o cerrada. Nunca borres líneas.
-- El ejemplo está al final del mismo archivo.
-- Úsalo para: aprender con el tiempo comparando lo que estimaron con lo que pasó de verdad.
-
----
-
-## Cada mes
-
-16.- **`datos/plantillas/pulso-satisfaccion.plantilla.md`**
-- Qué hacer: el Jefe de Atención pregunta a cada integrante una nota del 1 al 10 por pilar.
-- El ejemplo está al final del mismo archivo.
-- Úsalo para: detectar a tiempo si alguien está peor. Si una nota baja 2 puntos o más, se revisa en la junta.
-
----
-
-## Al final (solo el Arquitecto)
-
-17.- **`subagentes/generador-json.md`** y después **`tablero/prompt-generar-tablero.md`**
-- Qué hacer: pídele a Claude que use `generador-json` con las decisiones aprobadas y, luego, que genere el tablero con ese prompt.
-- El ejemplo para probar está en `datos/ejemplos/` (las dos decisiones).
-- Úsalo para: ver todas las decisiones en un dashboard. **Nadie escribe ni edita el JSON a mano**: si algo está mal, se corrige el Markdown y se genera otra vez.
-
----
+## Si eres el Vibe Coder
+- Tus tareas están en `encargos-del-arquitecto.md`.
+- Usa las frases de `frases-para-claude.md`.
+- **No abras la carpeta `tecnico/`.** Es del Arquitecto y de Claude.
+- Si algo se ve técnico o no se entiende, no es tu culpa: avísale al Arquitecto.
 
 ## Si te atoras
-- ¿No entiendes una palabra? → `docs/glosario.md`
-- ¿Cómo se calculan las notas? → `docs/03-metodo-probabilistico.md`
-- ¿Eres Vibe Coder? → `aprendizaje/guia-vibe-coder.md`
-- ¿Vas a abrir una conversación nueva con Claude? → pega `PROMPT_CONTINUIDAD.md`
+- Pídele a Claude: *"Explícamelo con palabras sencillas."*
+- Si sigue sin entenderse, pregúntale al Arquitecto.
