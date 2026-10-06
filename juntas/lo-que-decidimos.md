@@ -4,6 +4,7 @@
 La lista de todas las decisiones que la familia ha tomado. Es la memoria oficial: lo que se dijo en el chat con Claude no cuenta, solo lo que está escrito aquí.
 
 ## Cómo llenarlo
+- **La forma fácil:** escribe `/llenar lo que decidimos` en Claude y contesta. Claude te hace estas preguntas una por una y guarda todo en `mis-datos/`.
 - Agrega una línea cada vez que decidan algo y otra cuando revisen cómo salió.
 - **Nunca borres líneas.** Solo agrega al final.
 - Con el tiempo, comparen lo que creían que iba a pasar con lo que pasó de verdad. Así aprenden a calcular mejor.

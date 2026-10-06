@@ -1,40 +1,43 @@
 # Frases para Claude
 
-Copia la frase, cambia lo que está entre [corchetes] y pégala en Claude. Así no tienes que pensar cómo pedirlo.
+Escribe el comando o copia la frase en la terminal de Claude. Cambia lo que está entre [corchetes].
 
-## Para llenar archivos
-- **Que Claude te haga las preguntas:**
-  "Ayúdame a llenar [nueva decisión]. Hazme las preguntas una por una, con palabras sencillas."
-- **Si no sabes qué escribir:**
-  "Estoy llenando [lo que nunca aceptamos] y no sé qué poner. Dame 3 ideas de ejemplo."
+## Los comandos (lo que más vas a usar)
+- `/empezar` — "¿Qué sigue?". Te lleva paso a paso.
+- `/llenar nueva decisión` — escribe una decisión nueva contestando preguntas.
+- `/llenar mi opinión a solas` — tu opinión sobre una decisión, sin ver la del otro padre.
+- `/llenar cómo nos sentimos` — la encuesta del mes.
+- `/llenar editar [quiénes somos]` — cambia algo que ya llenaron.
+- `/llenar borrar [la decisión del auto]` — borra algo (te pide confirmar dos veces).
+- `/revisar` — revisa una decisión y te dice cómo sale cada camino.
+- `/junta` — prepara la junta del domingo y guarda lo que decidieron.
 
-## Para revisar una decisión
-- **La revisión completa** (es la que más vas a usar):
-  "Revisa mi decisión [mis-datos/decision-escuela.md]."
-  Claude revisa la privacidad, pule la redacción, le pone número, decide quién la vigila, busca errores y la califica. Al final te dice en palabras simples qué arreglar y cómo salió cada camino.
-- **Comparar opiniones:**
-  "Compara la opinión de Padre-A con la de Padre-B sobre [la escuela]."
+## Mientras contestas
+- "No sé." → Claude lo anota como pendiente y sigue.
+- "Dame un ejemplo." → te muestra uno.
+- "Lo dejo aquí." → guarda tu avance para seguir otro día.
+- "Regresa a la pregunta anterior." → la puedes cambiar.
 
 ## Para entender
 - "Explícame este resultado con palabras sencillas."
-- "No entiendo qué significa [calificación del camino]. Explícamelo con un ejemplo."
 - "¿Por qué dices que es un empate?"
-
-## Para la junta y el mes
-- "Prepara el resumen para la junta del domingo."
-- "¿Qué fechas importantes vencen en las próximas 4 semanas?"
-- "Revisa cómo nos sentimos este mes y dime si alguien bajó."
 - "Según cómo estamos hoy, ¿qué decisión conviene abrir primero?"
+- "¿Qué fechas importantes vencen en las próximas 4 semanas?"
 
 ## Si algo se ve técnico o raro
 - "Esto se ve técnico. Explícamelo como si no supiera nada de computadoras."
+- Si aparece una ventana pidiendo permiso y no entiendes qué pide, elige **No** y avísale al Arquitecto.
 - Si Claude te habla de JSON, specs, skills o subagentes, **no tienes que entenderlo**. Avísale al Arquitecto.
 
 ---
 
 ## EJEMPLO FICTICIO
-**Padre-A pega:** "Revisa mi decisión mis-datos/decision-escuela.md."
-**Claude contesta (resumen):**
-> Revisé tu decisión y la llamé DEC-001. La vigila el encargado de educación junto con Padre-A.
-> **Hay que arreglar 1 cosa:** en el camino 2, los números de "¿Qué podría pasar?" suman 9 y deben sumar 10.
-> **Cuando lo arregles:** el camino 1 sale con 6.7 y el camino 2 con 6.5. Es casi un empate.
+```
+Padre-A: /revisar
+Claude:  ¿Cuál decisión reviso?  [ ¿Cambiamos a Hijo-1 a la escuela bilingüe? ]
+Padre-A: (elige la escuela)
+Claude:  Revisé tu decisión y la llamé DEC-001. La vigila el encargado de educación junto con Padre-A.
+         Hay que arreglar 1 cosa: en el camino 2, "¿Qué podría pasar?" suma 9 y debe sumar 10.
+         Cuando lo arregles: camino 1 = 6.7, camino 2 = 6.5. Es casi un empate.
+         [ Arreglar lo que falta ahora ]  [ Después ]
+```

@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(./mis-datos/**)",
+      "Read(./mis-datos/**)",
+      "Read(./familia/**)",
+      "Read(./decisiones/**)",
+      "Read(./juntas/**)"
+    ],
+    "deny": [
+      "Read(./privado/**)",
+      "Edit(./privado/**)",
+      "Bash(cat privado*)",
+      "Bash(cat ./privado*)",
+      "Bash(less privado*)",
+      "Bash(more privado*)",
+      "Bash(head privado*)",
+      "Bash(tail privado*)",
+      "Bash(grep * privado*)",
+      "Bash(cp privado*)",
+      "Bash(open privado*)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '%s\\n' '{\"systemMessage\": \"Hola 👋 Escribe /empezar para continuar.\", \"hookSpecificOutput\": {\"hookEventName\": \"SessionStart\", \"additionalContext\": \"Si la persona no es el Arquitecto y no sabe qué hacer, sugiérele escribir /empezar. Nunca leas la carpeta privado/.\"}}'"
+          }
+        ]
+      }
+    ]
+  }
+}

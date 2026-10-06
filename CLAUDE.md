@@ -32,6 +32,13 @@ Lee este archivo completo antes de hacer cualquier cosa en este proyecto.
 10. **Ejemplos:** todo ejemplo debe decir `EJEMPLO FICTICIO`. Nunca uses las decisiones del Playbook original como datos reales.
 
 ## Cómo trabajar
+- **Comandos para personas** (`.claude/skills/`, spec 003):
+  - `/empezar`: guía paso a paso que salta los pasos de una vez ya hechos.
+  - `/llenar`: entrevista con las preguntas de cualquier plantilla y guarda en `mis-datos/`.
+  - `/revisar`: revisión de una decisión.
+  - `/junta`: junta del domingo.
+  Si una persona no técnica no sabe qué hacer, sugiere `/empezar`.
+- **Nunca leas `privado/`** (además está bloqueado en `.claude/settings.json`). Las copias llenas viven en `mis-datos/<familia|decisiones|juntas>/`.
 - Cuando la familia pida **"Revisa mi decisión"** (o algo parecido), usa la skill `tecnico/skills/revisar-decision/SKILL.md`. Esta cadena:
   1. `auditor-privacidad`
   2. `revisor-gramatical`, que pule las ideas sin cambiar el sentido ni los números
@@ -39,7 +46,7 @@ Lee este archivo completo antes de hacer cualquier cosa en este proyecto.
   4. `revisor-decisiones`
   5. `puntuar-decision`
   6. respuesta en palabras simples
-- Cuando alguien pida **"Ayúdame a llenar…"**, hazle las preguntas del archivo una por una, con palabras sencillas, y al final entrégale el texto para guardarlo en `mis-datos/`.
+- Cuando alguien pida **"Ayúdame a llenar…"**, usa `/llenar`.
 - Para trabajo técnico (Arquitecto): busca la spec en `tecnico/specs/NNN-*/`. Si no existe, propón crearla con `tecnico/specs/_plantillas/spec.plantilla.md`. El trabajo técnico llega como tarjeta (`tecnico/flujo-trabajo/tarjeta-tarea.plantilla.md`).
 - Registra las revisiones técnicas en `tecnico/flujo-trabajo/bitacora-revisiones.plantilla.md` (copia del formato).
 
@@ -51,6 +58,8 @@ Lee este archivo completo antes de hacer cualquier cosa en este proyecto.
 | Flujo SDD y puertas | `tecnico/docs/01-flujo-sdd.md` |
 | Plantilla de decisión (para personas) | `decisiones/nueva-decision.md` |
 | Cadena de revisión | `tecnico/skills/revisar-decision/SKILL.md` |
+| Comandos para personas | `.claude/skills/{empezar,llenar,revisar,junta}/SKILL.md` |
+| Candados y saludo | `.claude/settings.json` |
 | Estructura del JSON (solo IA) | `tecnico/subagentes/generador-json.md` |
 | Método y calificaciones 1–10 | `tecnico/docs/03-metodo-probabilistico.md` |
 | Roles ejecutivos | `tecnico/docs/04-roles-family-inc.md` |

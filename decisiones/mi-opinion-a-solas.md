@@ -4,6 +4,7 @@
 Cada padre llena **su propia copia sin ver la del otro**. Después Claude compara las dos y les dice en qué no están de acuerdo, para platicarlo en la junta.
 
 ## Cómo llenarlo
+- **La forma fácil:** escribe `/llenar mi opinión a solas` en Claude y contesta. Claude te hace estas preguntas una por una y guarda todo en `mis-datos/`.
 - Escribe de qué decisión se trata.
 - Para cada cosa que podría pasar, di cuántas veces de cada 10 crees **tú** que pasaría, y por qué.
 - Si calificarías algo distinto que en la decisión, escribe tu calificación del 1 al 10.

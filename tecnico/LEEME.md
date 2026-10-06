@@ -9,10 +9,24 @@ Eres el **puente** entre lo humano y lo técnico:
 3. **Eres dueño de las mejoras.** Specs, ADR, skills, subagentes, prompts y el tablero son tuyos.
 4. **Cuidas el lenguaje.** Cualquier archivo nuevo para personas pasa por `revisor-gramatical` en modo de revisión final antes de publicarse.
 
+## Comandos para personas (spec 003)
+Viven en `.claude/skills/` (ahí los reconoce Claude Code):
+- `/empezar`: guía de los pasos de `EMPIEZA-AQUI.md`. Detecta el avance por `mis-datos/` y `mis-datos/progreso.md`.
+- `/llenar`: entrevista genérica. Lee cualquier plantilla de `familia/`, `decisiones/` o `juntas/` como lista de preguntas y guarda en `mis-datos/<carpeta>/`.
+- `/revisar`: envoltorio de `tecnico/skills/revisar-decision`.
+- `/junta`: resumen del domingo y registro en `lo-que-decidimos`.
+
+Además, `.claude/settings.json`:
+- bloquea la lectura y edición de `privado/`;
+- deja escribir en `mis-datos/` sin preguntar;
+- muestra el saludo "Escribe /empezar" al iniciar.
+
+**Para agregar una función nueva para personas** basta con escribir una plantilla nueva en `familia/`, `decisiones/` o `juntas/` que siga la regla de abajo. `/llenar` ya la sabe llenar. Para que `/empezar` la incluya como paso, agrégala a su tabla.
+
 ## Cómo fluye una decisión
 ```
-Familia (frases simples en mis-datos/)
-  → "Revisa mi decisión" (skill revisar-decision)
+Familia: /empezar o /llenar nueva decisión (entrevista → mis-datos/decisiones/)
+  → /revisar (skill revisar-decision)
       1. auditor-privacidad
       2. revisor-gramatical (pulir ideas)
       3. organizar: DEC-NNN, pilares, quién lo cuida, límites, fechas
@@ -28,7 +42,7 @@ Familia (frases simples en mis-datos/)
 |---|---|
 | `docs/` | Principios, flujo SDD, privacidad, método 1–10, roles, RAG/memoria/logs, glosario |
 | `specs/` | Constitución + specs 001 (captura) y 002 (tablero) + plantillas SDD |
-| `skills/` | `revisar-decision` (cadena completa), `puntuar-decision` y los 5 ejecutivos |
+| `skills/` | `revisar-decision` (cadena completa), `puntuar-decision` y los 5 ejecutivos. Los comandos para personas están en `/.claude/skills/` |
 | `subagentes/` | `auditor-privacidad`, `revisor-gramatical`, `revisor-decisiones`, `revisor-entregable`, `investigador`, `generador-json` |
 | `prompts/` | Prompts de sistema (familia y Vibe Coder), humanos y de agente |
 | `flujo-trabajo/` | Tarjetas, checklist, bitácora de revisiones, ADR, estado del proyecto y `registros/` |

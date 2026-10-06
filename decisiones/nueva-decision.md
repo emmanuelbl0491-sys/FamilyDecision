@@ -1,6 +1,7 @@
 # Nueva decisión
 
-> **Antes de empezar:** haz una copia de este archivo en la carpeta `mis-datos/` y llena la copia. También puedes pedirle a Claude: *"Ayúdame a llenar una nueva decisión. Hazme las preguntas una por una."*
+> **La forma fácil:** escribe `/llenar nueva decisión` en Claude y contesta las preguntas. Claude guarda todo en `mis-datos/`.
+> Este archivo es la lista de preguntas que te va a hacer.
 >
 > Escribe con tus palabras. No calcules nada. Claude ordena la redacción, le pone número a la decisión, decide quién la vigila y hace las cuentas.
 > No escribas nombres reales ni cantidades exactas. Si no sabes algo, escribe "no sé".

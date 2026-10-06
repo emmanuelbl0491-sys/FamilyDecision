@@ -6,6 +6,7 @@ Para no darle a Claude cantidades exactas, ponemos el dinero en **rangos con let
 Se llena **una sola vez**. Las cifras exactas se quedan en tu computadora, en la carpeta `privado/`.
 
 ## Cómo llenarlo
+- **La forma fácil:** escribe `/llenar dinero en rangos` en Claude y contesta. Claude te hace estas preguntas una por una y guarda todo en `mis-datos/`.
 - Escribe en qué moneda están los rangos.
 - Para cada letra, escribe "de tanto a tanto". Usa números redondos.
 - No necesitas llenar todas las letras: llena las que les sirvan.

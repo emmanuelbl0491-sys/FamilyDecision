@@ -7,14 +7,14 @@ description: Cadena completa para revisar una decisión que escribió la familia
 
 ## Entrada
 - Una decisión basada en `decisiones/nueva-decision.md`, normalmente en `mis-datos/`.
-- `familia/1-lo-que-nunca-aceptamos.md` lleno (la copia en `mis-datos/`, si existe).
+- `mis-datos/familia/1-lo-que-nunca-aceptamos.md` (si todavía no existe, avisa que falta llenarlo con `/empezar`).
 - Opcional: las copias de `decisiones/mi-opinion-a-solas.md` de cada padre.
 
 ## Pasos (en este orden)
 1. **Privacidad:** aplica `tecnico/subagentes/auditor-privacidad.md`. Si el veredicto es DETENIDO, **detente**. Di en palabras simples qué tipo de dato hay que borrar y en qué línea, sin repetirlo.
 2. **Redacción:** aplica `tecnico/subagentes/revisor-gramatical.md` en modo "pulir ideas". Ordena y aclara las frases sin cambiar el sentido, los números ni las calificaciones. Si una idea mezcla dos cosas, sepárala y avísalo.
 3. **Organizar (lo asigna la IA):** sigue las reglas de "Lo que asigna la IA" de `tecnico/docs/03-metodo-probabilistico.md`.
-   - Número: DEC-NNN (el siguiente libre según `juntas/lo-que-decidimos.md` y `mis-datos/`).
+   - Número: DEC-NNN (el siguiente libre según `mis-datos/juntas/lo-que-decidimos.md` y las líneas "**Número:**" de `mis-datos/decisiones/`).
    - Pilar de cada idea.
    - Ejecutivo que la vigila.
    - Humano responsable (quien la llenó).

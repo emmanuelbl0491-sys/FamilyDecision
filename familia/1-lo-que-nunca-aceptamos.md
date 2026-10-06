@@ -6,6 +6,7 @@ Son las cosas que la familia **nunca** dejaría que pasaran, aunque todo lo dem�
 Cuando comparemos caminos, Claude revisa esta lista. Si un camino tiene más de 1 posibilidad en 10 de causar una de estas cosas, Claude **no lo recomienda**.
 
 ## Cómo llenarlo
+- **La forma fácil:** escribe `/llenar lo que nunca aceptamos` en Claude y contesta. Claude te hace estas preguntas una por una y guarda todo en `mis-datos/`.
 - Escribe de 2 a 5 frases. Empieza cada una con **"Nunca vamos a…"**.
 - Di **cómo sabríamos que pasó**, de forma que cualquiera pueda contestar "sí pasó" o "no pasó".
 - Di **por qué** es tan importante.

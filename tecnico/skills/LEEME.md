@@ -1,5 +1,7 @@
 # tecnico/skills/ — Skills de Claude
 
+> Los comandos para personas (`/empezar`, `/llenar`, `/revisar`, `/junta`) viven en `/.claude/skills/`, donde Claude Code los reconoce. Las skills de esta carpeta son de referencia técnica; para usarlas con un comando, cópialas a `.claude/skills/`.
+
 Una **skill** es una carpeta con un `SKILL.md`. Su `description` le dice a Claude **cuándo** usarla y el cuerpo le dice **cómo**.
 
 | Skill | Tipo | Se usa cuando… |

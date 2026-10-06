@@ -4,6 +4,7 @@
 Lo que se platicó y se decidió en la junta familiar del domingo. Lo escribe quien lleve las notas ese día.
 
 ## Cómo llenarlo
+- **La forma fácil:** escribe `/llenar notas de la junta` en Claude y contesta. Claude te hace estas preguntas una por una y guarda todo en `mis-datos/`.
 - Contesta cada pregunta con frases cortas.
 - Puedes pedirle a Claude: *"Prepara el resumen para la junta del domingo"* y usar su respuesta como guía.
 

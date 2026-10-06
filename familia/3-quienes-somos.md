@@ -4,6 +4,7 @@
 Una foto de la familia para que Claude entienda nuestra situación. **Nunca escribas nombres reales**: usa Padre-A, Padre-B, Hijo-1, Hijo-2…
 
 ## Cómo llenarlo
+- **La forma fácil:** escribe `/llenar quiénes somos` en Claude y contesta. Claude te hace estas preguntas una por una y guarda todo en `mis-datos/`.
 - Contesta solo lo que sepas. Lo demás déjalo vacío o escribe "no sé".
 - Si no estás seguro de un número, da un rango: "entre 5 y 9; lo más seguro, 7".
 - Al final de cada respuesta puedes decir qué tan seguro estás: **poco**, **más o menos** o **muy seguro**.

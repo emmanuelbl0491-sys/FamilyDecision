@@ -13,7 +13,7 @@ Contesta estas 5 preguntas en frases cortas:
 
 ## Cómo se trabaja un encargo (para el Vibe Coder)
 1. Lee el encargo. Si algo no se entiende, pregúntale al Arquitecto, no a Claude.
-2. Usa las frases de `frases-para-claude.md`.
+2. Usa `/empezar` y las frases de `frases-para-claude.md`.
 3. Cuando termines, escribe debajo del encargo "Listo" y la fecha. Agrega una frase sobre lo que te costó trabajo.
 4. El Arquitecto lo revisa.
 
@@ -24,10 +24,10 @@ Contesta estas 5 preguntas en frases cortas:
 
 ## EJEMPLO FICTICIO
 **Encargo 1 — Probar la decisión de la escuela**
-- **¿Qué hay que hacer?** Pedirle a Claude que revise `decisiones/ejemplos/escuela.md`.
+- **¿Qué hay que hacer?** Escribir en Claude: `/revisar decisiones/ejemplos/escuela.md`.
 - **¿Para qué sirve?** Para comprobar que Claude califica igual que el ejemplo.
 - **¿Qué archivos se usan?** `decisiones/ejemplos/escuela.md` y `decisiones/ejemplos/escuela-resultado.md`.
 - **¿Cómo sabemos que quedó listo?** Claude da 6.7 al camino 1 y 6.5 al camino 2, y dice que es casi un empate.
 - **¿Qué NO hay que hacer?** No cambiar el ejemplo para que "salga igual". Si sale distinto, solo avísale al Arquitecto.
 
-Listo — 16 de octubre de 2026. Me costó encontrar dónde pegar la frase.
+Listo — 16 de octubre de 2026. Me costó entender qué era "camino".

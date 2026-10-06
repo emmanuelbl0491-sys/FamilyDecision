@@ -4,6 +4,7 @@
 Una vez al mes, cada integrante dice cómo se siente en cinco temas. Sirve para darnos cuenta a tiempo si alguien está peor.
 
 ## Cómo llenarlo
+- **La forma fácil:** escribe `/llenar cómo nos sentimos` en Claude y contesta. Claude te hace estas preguntas una por una y guarda todo en `mis-datos/`.
 - Pregunta a cada persona cómo se siente en cada tema, del 1 al 10:
   - **Dinero:** ¿estamos tranquilos con el dinero?
   - **Salud:** ¿me siento sano y con energía?

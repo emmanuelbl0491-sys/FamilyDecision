@@ -4,6 +4,7 @@
 Una lista de lo bueno y lo malo de nuestra vida **hoy**. Sirve para descubrir qué tema necesita una decisión.
 
 ## Cómo llenarlo
+- **La forma fácil:** escribe `/llenar cómo estamos hoy` en Claude y contesta. Claude te hace estas preguntas una por una y guarda todo en `mis-datos/`.
 - Escribe una idea por línea.
 - Al final de cada idea, ponle una **calificación del 1 al 10**:
   - **1** = muy mal

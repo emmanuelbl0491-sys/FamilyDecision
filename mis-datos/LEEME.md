@@ -1,9 +1,17 @@
 # Mis datos
 
-Aquí van **sus copias llenas** de los archivos de `familia/`, `decisiones/` y `juntas/`.
+Aquí guarda Claude **todo lo que ustedes contestan**. Esta carpeta **nunca se sube a internet**.
 
-- Copia el archivo en blanco, pégalo aquí y llena la copia.
-- Ponle un nombre que se entienda. Por ejemplo: `decision-escuela-hijo1.md`.
-- Esta carpeta **nunca se sube a internet**, para proteger a la familia.
+No tienes que tocar nada: `/empezar` y `/llenar` crean y acomodan los archivos solos.
 
-EJEMPLO FICTICIO: `mis-datos/1-lo-que-nunca-aceptamos.md`, `mis-datos/decision-seguro-medico.md`
+```
+mis-datos/
+├── progreso.md        ← en qué paso van (lo actualiza Claude)
+├── familia/           ← lo que nunca aceptamos, dinero, quiénes somos, cómo estamos, fechas
+├── decisiones/        ← cada decisión y las opiniones a solas
+├── juntas/            ← notas de cada junta, lo que decidimos, cómo nos sentimos
+├── borradores/        ← lo que dejaron a medias
+└── revisiones/        ← informes para el Arquitecto
+```
+
+**💾 Respaldo:** como esta carpeta solo vive en esta computadora, cópienla una vez al mes a una USB o a una carpeta cifrada. Claude se los recuerda.
